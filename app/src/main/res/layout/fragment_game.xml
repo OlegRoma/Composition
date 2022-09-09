@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.GameFragment">
+
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="00:00"
+
+        android:textColor="@color/purple_700"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_sum"
+        style="@style/QuestionTextStyle"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:background="@drawable/circle_background"
+        android:text="1"
+        android:textColor="#546E7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timer" />
+
+    <TextView
+        android:id="@+id/tv_left_number"
+        style="@style/QuestionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:background="@color/teal_700"
+        android:text="7"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/tv_left_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sum" />
+
+    <TextView
+        android:id="@+id/tv_left_question"
+        style="@style/QuestionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="27dp"
+        android:background="@color/red"
+        android:text="?"
+        android:textColor="#311B92"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_left_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sum" />
+
+    <TextView
+        android:id="@+id/tv_option_1"
+        style="@style/OptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/green"
+        android:text="1"
+        android:textColor="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/tv_option_4"
+        app:layout_constraintEnd_toStartOf="@+id/tv_option_2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_option_2"
+        style="@style/OptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/yellow"
+        android:text="2"
+        android:textColor="#616161"
+        app:layout_constraintBottom_toTopOf="@+id/tv_option_5"
+        app:layout_constraintEnd_toStartOf="@+id/tv_option_3"
+        app:layout_constraintStart_toEndOf="@+id/tv_option_1" />
+
+    <TextView
+        android:id="@+id/tv_option_3"
+        style="@style/OptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/purple_700"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/tv_option_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_option_2" />
+
+    <TextView
+        android:id="@+id/tv_option_4"
+        style="@style/OptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="24dp"
+        android:background="@color/teal_200"
+        android:text="4"
+        android:textColor="#5E35B1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_option_5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_option_5"
+        style="@style/OptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="24dp"
+        android:background="@color/teal_700"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_option_6"
+        app:layout_constraintStart_toEndOf="@+id/tv_option_4" />
+
+    <TextView
+        android:id="@+id/tv_option_6"
+        style="@style/OptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="24dp"
+        android:background="@color/purple_200"
+        android:text="6"
+        android:textColor="#5E35B1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_option_5" />
+
+    <TextView
+        android:id="@+id/tv_answers_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="правильных ответов  %s (минимум %s)"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:scaleY="4"
+        android:layout_marginBottom="40dp"
+        android:max="100"
+        android:secondaryProgressTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tv_option_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
